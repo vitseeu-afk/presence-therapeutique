@@ -15,13 +15,10 @@ export default function Home() {
             <p className="text-sage-dark font-medium text-sm tracking-widest uppercase mb-8 animate-fade-in-up">
               Formation pour professionnels de santé
             </p>
-            <h1 className="text-4xl sm:text-5xl lg:text-5xl font-serif font-bold text-text leading-tight mb-8 animate-fade-in-up animation-delay-200">
+            <h1 className="text-4xl sm:text-5xl lg:text-4xl font-serif font-bold text-text leading-tight mb-8 animate-fade-in-up animation-delay-200">
               <>
-                Et si la clé
-                <br />
-                d&apos;un meilleur accompagnement
-                <br />
-                <span className="text-green-700 italic">commençait par soi ?</span>
+                <span className="block">Et si la clé d&apos;un meilleur accompagnement</span>
+                <span className="block" style={{color: '#a1b9a1', fontStyle: 'italic'}}>commençait par soi ?</span>
               </>
             </h1>
             <p className="text-lg sm:text-xl text-text-light leading-relaxed mb-12 max-w-2xl mx-auto animate-fade-in-up animation-delay-400">
