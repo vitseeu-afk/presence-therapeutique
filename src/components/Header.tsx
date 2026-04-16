@@ -6,7 +6,11 @@ import { useState } from "react";
 
 const navigation = [
   { name: "Accueil", href: "/" },
-  { name: "Formations", href: "/formations" },
+  { name: "Formations", href: "/formations", submenu: [
+    { name: "Présence à Soi", href: "/formations" },
+    { name: "Présence à l'Autre", href: "/formations" },
+    { name: "L'Art du geste juste", href: "/formations" }
+  ] },
   { name: "Ateliers & Stages", href: "/ateliers-stages" },
   { name: "Entreprises", href: "/entreprises" },
   { name: "À propos", href: "/a-propos" },
@@ -36,13 +40,35 @@ export default function Header() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
             {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="px-4 py-2 text-sm font-medium text-text-light hover:text-sage-dark transition-colors rounded-lg hover:bg-sage/5"
-              >
-                {item.name}
-              </Link>
+              item.submenu ? (
+                <div key={item.name} className="relative group">
+                  <Link
+                    href={item.href}
+                    className="px-4 py-2 text-sm font-medium text-text-light hover:text-sage-dark transition-colors rounded-lg hover:bg-sage/5"
+                  >
+                    {item.name}
+                  </Link>
+                  <div className="absolute top-full left-0 mt-1 w-48 bg-white border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    {item.submenu.map((sub) => (
+                      <Link
+                        key={sub.name}
+                        href={sub.href}
+                        className="block px-4 py-2 text-sm text-text-light hover:text-sage-dark hover:bg-sage/5 first:rounded-t-lg last:rounded-b-lg"
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="px-4 py-2 text-sm font-medium text-text-light hover:text-sage-dark transition-colors rounded-lg hover:bg-sage/5"
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
           </div>
 
@@ -78,14 +104,26 @@ export default function Header() {
           <div className="lg:hidden pb-6 pt-2 animate-fade-in">
             <div className="flex flex-col gap-1">
               {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="px-4 py-3 text-base font-medium text-text-light hover:text-sage-dark hover:bg-sage/5 rounded-lg transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
+                <>
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="px-4 py-3 text-base font-medium text-text-light hover:text-sage-dark hover:bg-sage/5 rounded-lg transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                  {item.submenu && item.submenu.map((sub) => (
+                    <Link
+                      key={sub.name}
+                      href={sub.href}
+                      className="px-8 py-2 text-sm text-text-light hover:text-sage-dark hover:bg-sage/5 rounded-lg transition-colors"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
+                </>
               ))}
               <div className="mt-3 px-4">
                 <Link
