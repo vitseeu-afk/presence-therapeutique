@@ -15,7 +15,7 @@ export default function Home() {
             <p className="text-sage-dark font-medium text-sm tracking-widest uppercase mb-8 animate-fade-in-up">
               Formation pour professionnels de santé
             </p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-text leading-tight mb-8 animate-fade-in-up animation-delay-200">
+            <h1 className="text-4xl sm:text-5xl lg:text-5xl font-serif font-bold text-text leading-tight mb-8 animate-fade-in-up animation-delay-200">
               <>
                 <span className="block">Et si la clé d&apos;un meilleur accompagnement</span>
                 <span className="block mt-6 text-3xl sm:text-4xl" style={{color: '#a1b9a1', fontStyle: 'italic'}}>commençait par soi ?</span>
