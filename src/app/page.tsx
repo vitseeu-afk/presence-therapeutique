@@ -18,7 +18,7 @@ export default function Home() {
             <h1 className="text-4xl sm:text-5xl lg:text-5xl font-serif font-bold text-text leading-tight mb-8 animate-fade-in-up animation-delay-200">
               <>
                 <span className="block">Et si la clé d&apos;un meilleur accompagnement</span>
-                <span className="block mt-6 text-3xl sm:text-4xl" style={{color: '#5c8a5c', fontStyle: 'italic'}}>commençait par soi ?</span>
+                <span className="block mt-4 text-3xl sm:text-4xl" style={{color: '#a1b9a1', fontStyle: 'italic'}}>commençait par soi ?</span>
               </>
             </h1>
             <p className="text-lg sm:text-xl text-text-light leading-relaxed mb-12 max-w-2xl mx-auto animate-fade-in-up animation-delay-400">
@@ -49,16 +49,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <p className="text-2xl font-serif font-bold text-sage-dark">Humain</p>
-              <p className="text-sm text-text-muted mt-1">Avant tout</p>
+              <p className="text-2xl font-serif font-bold text-sage-dark">8+</p>
+              <p className="text-sm text-text-muted mt-1">Années d&apos;expérience clinique</p>
             </div>
             <div>
-              <p className="text-2xl font-serif font-bold text-sage-dark">Présence</p>
-              <p className="text-sm text-text-muted mt-1">Comme outil de soin</p>
+              <p className="text-2xl font-serif font-bold text-sage-dark">D.O.</p>
+              <p className="text-sm text-text-muted mt-1">Ostéopathe diplômée</p>
             </div>
             <div>
-              <p className="text-2xl font-serif font-bold text-sage-dark">Corps</p>
-              <p className="text-sm text-text-muted mt-1">Au cœur de la pratique</p>
+              <p className="text-2xl font-serif font-bold text-sage-dark">8 max</p>
+              <p className="text-sm text-text-muted mt-1">Participants par session</p>
             </div>
             <div>
               <p className="text-2xl font-serif font-bold text-sage-dark">100%</p>
@@ -278,10 +278,8 @@ export default function Home() {
               },
             ].map((item) => (
               <div key={item.title} className="bg-white rounded-2xl p-7 border border-border hover:shadow-md transition-shadow">
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="w-2 h-2 bg-sage rounded-full flex-shrink-0" />
-                  <h3 className="font-serif text-lg font-semibold text-text">{item.title}</h3>
-                </div>
+                <div className="w-2 h-2 bg-sage rounded-full mb-4" />
+                <h3 className="font-serif text-lg font-semibold text-text mb-2">{item.title}</h3>
                 <p className="text-text-light text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
@@ -395,7 +393,7 @@ export default function Home() {
               Un parcours en 3 modules
             </h2>
             <p className="text-text-light max-w-2xl mx-auto">
-              Ce parcours commence obligatoirement par le Module 1. Les modules suivants sont indépendants, vous choisissez d'en faire 1, 2 ou les 3, à votre rythme.
+              Chaque module est indépendant. Inscrivez-vous au module qui vous correspond, sans engagement pour la suite.
             </p>
           </div>
 
@@ -434,7 +432,7 @@ export default function Home() {
                     : "bg-cream border-border"
                 }`}
               >
-                <span className="text-5xl font-serif font-bold" style={{ color: '#a1b9a1' }}>{module.num}</span>
+                <span className="text-5xl font-serif font-bold text-sage/20">{module.num}</span>
                 <h3 className="text-xl font-serif font-semibold text-text mt-4 mb-2">{module.title}</h3>
                 <p className="text-text-light text-sm mb-4">{module.subtitle}</p>
                 <div className="flex items-center gap-4 text-sm text-text-muted mb-6">

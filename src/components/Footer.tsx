@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <Image src="/logo.svg" alt="Présence Thérapeutique" width={30} height={45} className="h-9 w-auto brightness-0 invert" />
+              <Image src="/logo4.svg" alt="Présence Thérapeutique" width={30} height={45} className="h-9 w-auto brightness-0 invert" />
               <span className="font-serif text-lg font-semibold text-white">
                 Présence Thérapeutique
               </span>
