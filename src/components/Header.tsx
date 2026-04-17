@@ -26,7 +26,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <Image src="/logo.svg" alt="Présence Thérapeutique" width={48} height={72} className="h-14 w-auto" />
+            <Image src="/Logo Présence Thérapeutique.png" alt="Présence Thérapeutique" width={120} height={48} className="h-12 w-auto" />
             <div>
               <span className="font-serif text-lg text-text font-semibold tracking-tight">
                 Présence
