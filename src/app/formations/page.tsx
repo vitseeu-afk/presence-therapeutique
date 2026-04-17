@@ -56,7 +56,7 @@ export default function Formations() {
           <div className="max-w-5xl mx-auto">
             {/* Header Module */}
             <div className="flex items-center gap-4 mb-8">
-              <span className="text-6xl font-serif font-bold text-sage/20">01</span>
+              <span className="text-6xl font-serif font-bold" style={{ color: "#a1b9a1" }}>01</span>
               <div>
                 <span className="px-3 py-1 bg-sage/10 text-sage-dark text-xs font-semibold rounded-full">Inscriptions ouvertes</span>
                 <h2 className="text-3xl sm:text-4xl font-serif font-bold text-text mt-2">
@@ -305,7 +305,7 @@ export default function Formations() {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Module 2 */}
             <div className="bg-cream rounded-2xl p-8 border border-border">
-              <span className="text-5xl font-serif font-bold text-sage/15">02</span>
+              <span className="text-5xl font-serif font-bold" style={{ color: "#a1b9a1" }}>02</span>
               <h3 className="text-2xl font-serif font-semibold text-text mt-4 mb-2">Présence à l&apos;Autre</h3>
               <p className="text-sage-dark text-sm font-medium mb-4">3 jours en présentiel &middot; Date à venir</p>
               <p className="text-text-light text-sm leading-relaxed mb-6 italic">
@@ -336,7 +336,7 @@ export default function Formations() {
 
             {/* Module 3 */}
             <div className="bg-cream rounded-2xl p-8 border border-border">
-              <span className="text-5xl font-serif font-bold text-sage/15">03</span>
+              <span className="text-5xl font-serif font-bold" style={{ color: "#a1b9a1" }}>03</span>
               <h3 className="text-2xl font-serif font-semibold text-text mt-4 mb-2">L&apos;Art du geste juste</h3>
               <p className="text-sage-dark text-sm font-medium mb-4">4 jours en présentiel &middot; Date à venir</p>
               <p className="text-text-light text-sm leading-relaxed mb-6 italic">
