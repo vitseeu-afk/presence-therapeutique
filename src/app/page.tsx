@@ -278,8 +278,10 @@ export default function Home() {
               },
             ].map((item) => (
               <div key={item.title} className="bg-white rounded-2xl p-7 border border-border hover:shadow-md transition-shadow">
-                <div className="w-2 h-2 bg-sage rounded-full mb-4" />
-                <h3 className="font-serif text-lg font-semibold text-text mb-2">{item.title}</h3>
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="w-2 h-2 bg-sage rounded-full flex-shrink-0" />
+                  <h3 className="font-serif text-lg font-semibold text-text">{item.title}</h3>
+                </div>
                 <p className="text-text-light text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
