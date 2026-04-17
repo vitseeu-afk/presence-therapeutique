@@ -434,7 +434,7 @@ export default function Home() {
                     : "bg-cream border-border"
                 }`}
               >
-                <span className="text-5xl font-serif font-bold text-sage/20">{module.num}</span>
+                <span className="text-5xl font-serif font-bold" style={{ color: '#a1b9a1' }}>{module.num}</span>
                 <h3 className="text-xl font-serif font-semibold text-text mt-4 mb-2">{module.title}</h3>
                 <p className="text-text-light text-sm mb-4">{module.subtitle}</p>
                 <div className="flex items-center gap-4 text-sm text-text-muted mb-6">
