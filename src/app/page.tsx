@@ -395,7 +395,7 @@ export default function Home() {
               Un parcours en 3 modules
             </h2>
             <p className="text-text-light max-w-2xl mx-auto">
-              Chaque module est indépendant. Inscrivez-vous au module qui vous correspond, sans engagement pour la suite.
+              Ce parcours commence obligatoirement par le Module 1. Les modules suivants sont indépendants, vous choisissez d'en faire 1, 2 ou les 3, à votre rythme.
             </p>
           </div>
 
