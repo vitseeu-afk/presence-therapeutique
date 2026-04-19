@@ -112,10 +112,12 @@ export default function Home() {
                 key={item.title}
                 className="bg-white rounded-2xl p-8 border border-border hover:shadow-lg transition-shadow"
               >
-                <div className="w-14 h-14 bg-warm rounded-xl flex items-center justify-center text-terracotta mb-5">
-                  {item.icon}
+                <div className="flex items-center gap-4 mb-5">
+                  <div className="w-14 h-14 bg-warm rounded-xl flex items-center justify-center text-terracotta shrink-0">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-xl font-serif font-semibold text-text">{item.title}</h3>
                 </div>
-                <h3 className="text-xl font-serif font-semibold text-text mb-3">{item.title}</h3>
                 <p className="text-text-light leading-relaxed">{item.desc}</p>
               </div>
             ))}
