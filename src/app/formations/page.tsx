@@ -2,9 +2,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Nos formations",
+  title: "Formations en Présence Thérapeutique Intégrative",
   description:
-    "Découvrez nos formations en présentiel et en ligne autour de la Présence Thérapeutique Intégrative et de la théorie polyvagale.",
+    "Découvrez nos formations pour professionnels de santé : Module 1 Présence à Soi, Module 2 Présence à l'Autre, Module 3 L'Art du geste juste. Approche psycho-corporelle et neurosciences.",
+  keywords: [
+    "formation présence thérapeutique",
+    "formation soignant",
+    "module présence à soi",
+    "théorie polyvagale formation",
+    "formation régulation émotionnelle",
+    "formation psycho-corporelle",
+    "formation continue thérapeute",
+    "prévention épuisement soignant",
+  ],
 };
 
 export default function Formations() {
