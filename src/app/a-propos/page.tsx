@@ -25,7 +25,8 @@ export default function APropos() {
                 Professeur d&apos;anatomie en prépa de faculté de médecine depuis plusieurs années.
               </p>
               <p className="text-text-light leading-relaxed mb-6">
-                Cabinet installé à Hazebrouck (59). Formatrice en Présence Thérapeutique Intégrative.
+                Cabinet installé à Hazebrouck (59).<br />
+                Formatrice en Présence Thérapeutique Intégrative.
               </p>
               <div className="flex gap-4">
                 <Link href="/contact" className="px-6 py-3 bg-sage text-white font-semibold rounded-full hover:bg-sage-dark transition-all">
