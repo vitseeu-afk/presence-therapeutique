@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Inscription - Module 1 : Présence à Soi",
   description:
-    "Inscrivez-vous au Module 1 Présence à Soi. 12-14 octobre 2026, Loos (59). Formation en Présence Thérapeutique Intégrative pour professionnels de santé.",
+    "Inscrivez-vous au Module 1 Présence à Soi. 12-14 octobre 2026 ou 8-10 février 2027, Loos (59). Formation en Présence Thérapeutique Intégrative pour professionnels de santé.",
 };
 
 export default function Inscription() {
@@ -18,7 +18,7 @@ export default function Inscription() {
               Module 1 : Présence à Soi
             </h1>
             <p className="text-text-light">
-              12, 13 et 14 octobre 2026 &middot; HUB Eurasanté, Loos (59) &middot; 450 &euro;
+              12–14 oct. 2026 ou 8–10 fév. 2027 &middot; HUB Eurasanté, Loos (59) &middot; 450 &euro;
             </p>
           </div>
 
@@ -48,6 +48,20 @@ export default function Inscription() {
               <div className="bg-white rounded-2xl p-8 border border-border">
                 <h2 className="text-xl font-serif font-semibold text-text mb-6">Vos informations</h2>
                 <form className="space-y-5">
+                  <div>
+                    <label className="block text-sm font-medium text-text mb-3">Date souhaitée *</label>
+                    <div className="space-y-3">
+                      <label className="flex items-center gap-3 cursor-pointer p-4 rounded-xl border border-border bg-cream/50 hover:border-sage/50 transition-colors">
+                        <input type="radio" name="date" value="12-14-octobre-2026" required className="w-4 h-4 text-sage border-border focus:ring-sage" />
+                        <span className="text-sm text-text">12, 13 et 14 octobre 2026</span>
+                      </label>
+                      <label className="flex items-center gap-3 cursor-pointer p-4 rounded-xl border border-border bg-cream/50 hover:border-sage/50 transition-colors">
+                        <input type="radio" name="date" value="8-10-fevrier-2027" className="w-4 h-4 text-sage border-border focus:ring-sage" />
+                        <span className="text-sm text-text">8, 9 et 10 février 2027</span>
+                      </label>
+                    </div>
+                  </div>
+
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="nom" className="block text-sm font-medium text-text mb-1.5">Nom *</label>
@@ -152,7 +166,11 @@ export default function Inscription() {
                   <h3 className="font-serif text-lg font-semibold text-text mb-4">Récapitulatif</h3>
                   <div className="space-y-3 text-sm text-text-light mb-6">
                     <p><strong className="text-text">Formation :</strong> Module 1 - Présence à Soi</p>
-                    <p><strong className="text-text">Dates :</strong> 12, 13, 14 octobre 2026</p>
+                    <div>
+                      <strong className="text-text">Dates disponibles :</strong>
+                      <p className="mt-1">12, 13 et 14 octobre 2026</p>
+                      <p>8, 9 et 10 février 2027</p>
+                    </div>
                     <p><strong className="text-text">Horaires :</strong> 9h - 17h30</p>
                     <p><strong className="text-text">Lieu :</strong> HUB Eurasanté, Loos</p>
                     <p><strong className="text-text">Durée :</strong> 3 jours (21h)</p>

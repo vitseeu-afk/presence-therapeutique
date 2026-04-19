@@ -147,12 +147,15 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-sage-dark font-medium text-sm tracking-widest uppercase mb-4">
-              Prochaine session
+              Dates disponibles
             </p>
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-text mb-4">
               Module 1 : Présence à Soi
             </h2>
-            <p className="text-lg text-text-light">12, 13 et 14 octobre 2026 &middot; 3 jours &middot; Loos (59)</p>
+            <div className="flex flex-col items-center gap-1">
+              <p className="text-lg text-text-light">12, 13 et 14 octobre 2026 &middot; ou &middot; 8, 9 et 10 février 2027</p>
+              <p className="text-sm text-text-muted">3 jours &middot; HUB Eurasanté, Loos (59)</p>
+            </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
@@ -190,7 +193,10 @@ export default function Home() {
                   <svg className="w-5 h-5 text-sage" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
                   </svg>
-                  <span>12, 13 et 14 octobre 2026</span>
+                  <div>
+                    <p>12, 13 et 14 octobre 2026</p>
+                    <p>8, 9 et 10 février 2027</p>
+                  </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <svg className="w-5 h-5 text-sage" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
