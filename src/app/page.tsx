@@ -47,7 +47,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <p className="text-2xl font-serif font-bold text-sage-dark">15 max</p>
+              <p className="text-2xl font-serif font-bold text-sage-dark">15</p>
               <p className="text-sm text-text-muted mt-1">Participants par session</p>
             </div>
             <div>
