@@ -442,7 +442,7 @@ export default function Home() {
                 </div>
                 {module.available ? (
                   <Link
-                    href="/formations"
+                    href="/formations/presence-therapeutique"
                     className="inline-flex px-6 py-2.5 bg-sage text-white text-sm font-semibold rounded-full hover:bg-sage-dark transition-all"
                   >
                     Voir le programme
