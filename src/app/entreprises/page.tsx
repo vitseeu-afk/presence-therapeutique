@@ -80,9 +80,10 @@ export default function Entreprises() {
 
       {/* Themes */}
       <section className="py-20 lg:py-28 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-serif font-bold text-text mb-12 text-center">Thèmes d&apos;intervention</h2>
-          <div className="grid sm:grid-cols-2 gap-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-serif font-bold text-text mb-4 text-center">Thèmes d&apos;intervention</h2>
+          <p className="text-text-light text-center mb-14 text-lg max-w-2xl mx-auto">Des sujets ancrés dans la pratique clinique, adaptables à vos équipes et contextes.</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               "La présence thérapeutique : un levier de qualité de soin",
               "Prévention de l'épuisement professionnel chez les soignants",
@@ -91,9 +92,9 @@ export default function Entreprises() {
               "Posture et conscience corporelle dans la relation de soin",
               "Neurosciences et qualité de la relation patient-soignant",
             ].map((theme) => (
-              <div key={theme} className="flex items-start gap-3 bg-cream rounded-xl p-5 border border-border">
-                <div className="w-2 h-2 bg-sage rounded-full mt-2 shrink-0" />
-                <span className="text-text-light text-sm">{theme}</span>
+              <div key={theme} className="flex flex-col gap-4 bg-cream rounded-2xl p-8 border border-border hover:shadow-md transition-shadow">
+                <div className="w-3 h-3 bg-sage rounded-full shrink-0" />
+                <span className="text-text font-medium text-base leading-relaxed">{theme}</span>
               </div>
             ))}
           </div>
