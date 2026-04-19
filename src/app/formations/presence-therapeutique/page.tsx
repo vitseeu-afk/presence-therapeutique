@@ -272,17 +272,11 @@ export default function Formations() {
                   </div>
 
                   <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <button disabled className="flex-1 px-6 py-3 bg-gray-100 text-gray-400 font-semibold rounded-full cursor-not-allowed text-base border border-gray-200">
-                        S&apos;inscrire
-                      </button>
-                      <span className="text-red-600 font-bold text-sm shrink-0">Complet</span>
-                    </div>
                     <Link
                       href="/inscription"
                       className="block text-center w-full px-8 py-4 bg-sage text-white font-semibold rounded-full hover:bg-sage-dark transition-all hover:shadow-lg text-base"
                     >
-                      S&apos;inscrire — fév. 2027
+                      S&apos;inscrire — Session Fév. 2027
                     </Link>
                     <p className="text-xs text-text-muted text-center">
                       Paiement sécurisé &middot; Satisfait ou remboursé
