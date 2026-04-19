@@ -21,7 +21,7 @@ export default function APropos() {
                 Eugénie Vitse
               </h1>
               <p className="text-lg text-text-light leading-relaxed mb-4">
-                Ostéopathe D.O., spécialisée en approche biodynamique et thérapeute en constellation familiale.
+                Ostéopathe D.O., spécialisée en approche psycho-corporelle et biodynamique, et thérapeute en constellation familiale.
                 Professeur d&apos;anatomie en prépa de faculté de médecine depuis plusieurs années.
               </p>
               <p className="text-text-light leading-relaxed mb-6">
