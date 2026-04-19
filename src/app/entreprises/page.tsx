@@ -92,8 +92,8 @@ export default function Entreprises() {
               "Posture et conscience corporelle dans la relation de soin",
               "Neurosciences et qualité de la relation patient-soignant",
             ].map((theme) => (
-              <div key={theme} className="flex flex-col gap-4 bg-cream rounded-2xl p-8 border border-border hover:shadow-md transition-shadow">
-                <div className="w-3 h-3 bg-sage rounded-full shrink-0" />
+              <div key={theme} className="flex items-start gap-4 bg-cream rounded-2xl p-8 border border-border hover:shadow-md transition-shadow">
+                <div className="w-3 h-3 bg-sage rounded-full shrink-0 mt-1" />
                 <span className="text-text font-medium text-base leading-relaxed">{theme}</span>
               </div>
             ))}
