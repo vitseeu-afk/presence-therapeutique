@@ -28,7 +28,7 @@ export default function Formations() {
               Formations professionnelles
             </p>
             <h1 className="text-4xl sm:text-5xl font-serif font-bold text-text mb-6">
-              La Présence Thérapeutique :<br />
+              La Présence Thérapeutique Intégrative :<br />
               <span className="text-sage-dark">du soin de soi, au geste juste</span>
             </h1>
             <p className="text-lg text-text-light leading-relaxed max-w-2xl mx-auto">
