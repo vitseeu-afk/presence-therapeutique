@@ -10,23 +10,23 @@ export default function Home() {
           <div className="absolute top-20 right-20 w-96 h-96 bg-sage rounded-full blur-3xl" />
           <div className="absolute bottom-20 left-20 w-72 h-72 bg-terracotta rounded-full blur-3xl" />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24 lg:pt-28 lg:pb-40 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 lg:pt-24 lg:pb-32 relative">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-sage-dark font-medium text-sm tracking-widest uppercase mb-8 animate-fade-in-up">
+            <p className="text-sage-dark font-medium text-sm tracking-widest uppercase mb-6 animate-fade-in-up">
               Formation pour professionnels de santé
             </p>
-            <h1 className="text-4xl sm:text-5xl lg:text-5xl font-serif font-bold text-text leading-tight mb-8 animate-fade-in-up animation-delay-200">
+            <h1 className="text-4xl sm:text-5xl lg:text-4xl xl:text-5xl font-serif font-bold text-text leading-tight mb-6 animate-fade-in-up animation-delay-200 lg:whitespace-nowrap">
               <>
-                <span className="block">Et si la clé d&apos;un meilleur accompagnement</span>
-                <span className="block mt-4 text-3xl sm:text-4xl" style={{color: '#a1b9a1', fontStyle: 'italic'}}>commençait par soi ?</span>
+                Et si la clé d&apos;un meilleur accompagnement{" "}
+                <span className="text-green-700 italic">commençait par soi ?</span>
               </>
             </h1>
-            <p className="text-lg sm:text-xl text-text-light leading-relaxed mb-12 max-w-2xl mx-auto animate-fade-in-up animation-delay-400">
+            <p className="text-lg sm:text-xl text-text-light leading-relaxed mb-10 max-w-2xl mx-auto animate-fade-in-up animation-delay-400">
               Découvrez la Présence Thérapeutique Intégrative : une approche psycho-corporelle
               fondée sur les neurosciences, pour retrouver ancrage, conscience et justesse
               dans votre pratique de soin.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fade-in-up animation-delay-600">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up animation-delay-600">
               <Link
                 href="/formations"
                 className="w-full sm:w-auto px-8 py-4 bg-sage text-white font-semibold rounded-full hover:bg-sage-dark transition-all hover:shadow-xl text-center text-lg"
@@ -114,12 +114,10 @@ export default function Home() {
                 key={item.title}
                 className="bg-white rounded-2xl p-8 border border-border hover:shadow-lg transition-shadow"
               >
-                <div className="flex items-center gap-4 mb-5">
-                  <div className="w-14 h-14 bg-warm rounded-xl flex items-center justify-center text-terracotta">
-                    {item.icon}
-                  </div>
-                  <h3 className="text-xl font-serif font-semibold text-text">{item.title}</h3>
+                <div className="w-14 h-14 bg-warm rounded-xl flex items-center justify-center text-terracotta mb-5">
+                  {item.icon}
                 </div>
+                <h3 className="text-xl font-serif font-semibold text-text mb-3">{item.title}</h3>
                 <p className="text-text-light leading-relaxed">{item.desc}</p>
               </div>
             ))}
