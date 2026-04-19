@@ -213,7 +213,10 @@ export default function Formations() {
 
               {/* Sidebar - Carte tarif */}
               <div className="lg:col-span-1">
-                <div className="sticky top-24 bg-white rounded-2xl p-8 border border-border shadow-sm">
+                <div className="sticky top-24 bg-white rounded-2xl p-8 border border-border shadow-sm relative">
+                  <span className="absolute top-4 right-4 px-3 py-1 bg-orange-50 text-orange-600 text-xs font-semibold rounded-full border border-orange-200">
+                    Places limitées
+                  </span>
                   <h3 className="text-xl font-serif font-bold mb-1">Module 1 : Présence à Soi</h3>
                   <p className="text-text-muted text-sm mb-6">3 jours - 21h de formation</p>
 
