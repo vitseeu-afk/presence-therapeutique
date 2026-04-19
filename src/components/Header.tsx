@@ -7,9 +7,7 @@ import { useState } from "react";
 const navigation = [
   { name: "Accueil", href: "/" },
   { name: "Formations", href: "/formations", submenu: [
-    { name: "Présence à Soi", href: "/formations" },
-    { name: "Présence à l'Autre", href: "/formations" },
-    { name: "L'Art du geste juste", href: "/formations" }
+    { name: "La Présence Thérapeutique Intégrative", href: "/formations/presence-therapeutique" },
   ] },
   { name: "Ateliers & Stages", href: "/ateliers-stages" },
   { name: "Entreprises", href: "/entreprises" },
