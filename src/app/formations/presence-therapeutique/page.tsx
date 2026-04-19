@@ -214,9 +214,6 @@ export default function Formations() {
               {/* Sidebar - Carte tarif */}
               <div className="lg:col-span-1">
                 <div className="sticky top-24 bg-white rounded-2xl p-8 border border-border shadow-sm">
-                  <div className="flex items-center gap-2 mb-4">
-                    <span className="text-red-600 font-bold text-sm">2 places restantes</span>
-                  </div>
                   <h3 className="text-xl font-serif font-bold mb-1">Module 1 : Présence à Soi</h3>
                   <p className="text-text-muted text-sm mb-6">3 jours - 21h de formation</p>
 
@@ -226,7 +223,10 @@ export default function Formations() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
                       </svg>
                       <div>
-                        <p>12, 13 et 14 octobre 2026</p>
+                        <div className="flex items-center gap-2">
+                          <span className="text-text-muted">12, 13 et 14 octobre 2026</span>
+                          <span className="text-red-600 font-bold text-xs">· Complet</span>
+                        </div>
                         <p>8, 9 et 10 février 2027</p>
                       </div>
                     </div>
@@ -268,15 +268,23 @@ export default function Formations() {
                     <p className="text-xs text-text-muted">Solde par virement avant le 5 octobre 2026</p>
                   </div>
 
-                  <Link
-                    href="/inscription"
-                    className="block text-center w-full px-8 py-4 bg-sage text-white font-semibold rounded-full hover:bg-sage-dark transition-all hover:shadow-lg text-lg mb-3"
-                  >
-                    S&apos;inscrire maintenant
-                  </Link>
-                  <p className="text-xs text-text-muted text-center">
-                    Paiement sécurisé &middot; Satisfait ou remboursé
-                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <button disabled className="flex-1 px-6 py-3 bg-gray-100 text-gray-400 font-semibold rounded-full cursor-not-allowed text-base border border-gray-200">
+                        S&apos;inscrire
+                      </button>
+                      <span className="text-red-600 font-bold text-sm shrink-0">Complet</span>
+                    </div>
+                    <Link
+                      href="/inscription"
+                      className="block text-center w-full px-8 py-4 bg-sage text-white font-semibold rounded-full hover:bg-sage-dark transition-all hover:shadow-lg text-base"
+                    >
+                      S&apos;inscrire — fév. 2027
+                    </Link>
+                    <p className="text-xs text-text-muted text-center">
+                      Paiement sécurisé &middot; Satisfait ou remboursé
+                    </p>
+                  </div>
 
                   <div className="border-t border-border mt-6 pt-6">
                     <p className="text-xs text-text-muted">

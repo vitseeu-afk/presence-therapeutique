@@ -182,21 +182,24 @@ export default function Home() {
             </div>
 
             <div className="bg-cream rounded-3xl p-8 lg:p-10 border border-border">
-              <div className="flex items-center gap-2 mb-6">
-                <span className="text-red-600 font-bold text-sm">2 places restantes</span>
-              </div>
               <h3 className="text-2xl font-serif font-bold mb-2">Module 1 : Présence à Soi</h3>
               <p className="text-text-light mb-6">3 jours intenses de reconnexion à soi</p>
 
               <div className="space-y-3 mb-8 text-sm">
+                <div className="flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-3 text-text-muted">
+                    <svg className="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                    </svg>
+                    <span>12, 13 et 14 octobre 2026</span>
+                  </div>
+                  <span className="text-red-600 font-bold text-xs shrink-0">Complet</span>
+                </div>
                 <div className="flex items-center gap-3">
                   <svg className="w-5 h-5 text-sage" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
                   </svg>
-                  <div>
-                    <p>12, 13 et 14 octobre 2026</p>
-                    <p>8, 9 et 10 février 2027</p>
-                  </div>
+                  <span>8, 9 et 10 février 2027</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <svg className="w-5 h-5 text-sage" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -226,15 +229,23 @@ export default function Home() {
                 <p className="text-sm text-text-muted">Acompte de 135 &euro; à l&apos;inscription (30%)</p>
               </div>
 
-              <Link
-                href="/inscription"
-                className="block text-center w-full px-8 py-4 bg-sage text-white font-semibold rounded-full hover:bg-sage-dark transition-all hover:shadow-lg text-lg"
-              >
-                Réservez votre place
-              </Link>
-              <p className="text-xs text-text-muted text-center mt-3">
-                Paiement sécurisé par Stripe
-              </p>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <button disabled className="flex-1 px-6 py-3 bg-gray-100 text-gray-400 font-semibold rounded-full cursor-not-allowed text-base border border-gray-200">
+                    S&apos;inscrire
+                  </button>
+                  <span className="text-red-600 font-bold text-sm shrink-0">Complet</span>
+                </div>
+                <Link
+                  href="/inscription"
+                  className="block text-center w-full px-8 py-4 bg-sage text-white font-semibold rounded-full hover:bg-sage-dark transition-all hover:shadow-lg text-lg"
+                >
+                  S&apos;inscrire — fév. 2027
+                </Link>
+                <p className="text-xs text-text-muted text-center">
+                  Paiement sécurisé par Stripe
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -409,7 +420,7 @@ export default function Home() {
                 title: "Présence à Soi",
                 subtitle: "Se retrouver pour mieux soigner",
                 duration: "3 jours",
-                status: "Octobre 2026",
+                status: "Fév. 2027",
                 available: true,
               },
               {

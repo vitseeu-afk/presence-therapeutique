@@ -62,8 +62,9 @@ export default function FormationsCatalogue() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
                     </svg>
                     <div>
-                      <p className="text-xs text-text-muted font-medium uppercase tracking-wide">Date</p>
-                      <p className="text-sm text-text font-semibold">12, 13, 14 octobre 2026</p>
+                      <p className="text-xs text-text-muted font-medium uppercase tracking-wide">Dates</p>
+                      <p className="text-sm text-text-muted">12–14 oct. 2026 <span className="text-red-600 font-bold">· Complet</span></p>
+                      <p className="text-sm text-text font-semibold">8–10 fév. 2027</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -86,12 +87,18 @@ export default function FormationsCatalogue() {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-3">
+                <div className="flex flex-col sm:flex-row gap-3 flex-wrap items-center">
+                  <div className="flex items-center gap-3">
+                    <button disabled className="inline-flex items-center justify-center px-8 py-4 bg-gray-100 text-gray-400 font-semibold rounded-full cursor-not-allowed text-base border border-gray-200">
+                      S&apos;inscrire
+                    </button>
+                    <span className="text-red-600 font-bold text-sm">Complet</span>
+                  </div>
                   <Link
                     href="/inscription"
                     className="inline-flex items-center justify-center px-8 py-4 bg-sage text-white font-semibold rounded-full hover:bg-sage-dark transition-all hover:shadow-lg text-base"
                   >
-                    S&apos;inscrire
+                    S&apos;inscrire — fév. 2027
                   </Link>
                   <Link
                     href="/formations/presence-therapeutique"
