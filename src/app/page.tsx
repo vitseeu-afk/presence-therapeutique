@@ -47,20 +47,20 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <p className="text-2xl font-serif font-bold text-sage-dark">8+</p>
-              <p className="text-sm text-text-muted mt-1">Années d&apos;expérience clinique</p>
-            </div>
-            <div>
-              <p className="text-2xl font-serif font-bold text-sage-dark">D.O.</p>
-              <p className="text-sm text-text-muted mt-1">Ostéopathe diplômée</p>
-            </div>
-            <div>
-              <p className="text-2xl font-serif font-bold text-sage-dark">8 max</p>
+              <p className="text-2xl font-serif font-bold text-sage-dark">15 max</p>
               <p className="text-sm text-text-muted mt-1">Participants par session</p>
+            </div>
+            <div>
+              <p className="text-2xl font-serif font-bold text-sage-dark">Corps</p>
+              <p className="text-sm text-text-muted mt-1">Au cœur de la pratique</p>
             </div>
             <div>
               <p className="text-2xl font-serif font-bold text-sage-dark">100%</p>
               <p className="text-sm text-text-muted mt-1">Approche scientifique</p>
+            </div>
+            <div>
+              <p className="text-2xl font-serif font-bold text-sage-dark">Présence</p>
+              <p className="text-sm text-text-muted mt-1">Comme outil de soin</p>
             </div>
           </div>
         </div>
