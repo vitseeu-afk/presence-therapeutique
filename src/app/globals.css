@@ -1,8 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
+@theme {
   --color-sage: #5c8a5c;
   --color-sage-light: #c5d6c5;
   --color-sage-dark: #7a9a7a;
@@ -19,8 +17,8 @@
   --color-white: #ffffff;
   --color-border: #e8e2da;
 
-  --font-sans: var(--font-inter);
-  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, serif;
 }
 
 html {
@@ -30,13 +28,13 @@ html {
 body {
   background: var(--color-cream);
   color: var(--color-text);
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4 {
-  font-family: var(--font-serif), Georgia, serif;
+  font-family: var(--font-serif);
 }
 
 ::selection {
@@ -44,14 +42,12 @@ h1, h2, h3, h4 {
   color: var(--color-text);
 }
 
-/* Smooth scroll for anchor links */
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
   }
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -63,7 +59,6 @@ h1, h2, h3, h4 {
   border-radius: 4px;
 }
 
-/* Animation utilities */
 @keyframes fadeInUp {
   from {
     opacity: 0;
