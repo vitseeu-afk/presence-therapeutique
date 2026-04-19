@@ -215,7 +215,7 @@ export default function Formations() {
               <div className="lg:col-span-1">
                 <div className="sticky top-24 bg-white rounded-2xl p-8 border border-border shadow-sm">
                   <div className="flex items-center gap-2 mb-4">
-                    <span className="px-3 py-1 bg-sage/10 text-sage-dark text-xs font-semibold rounded-full">Places limitées</span>
+                    <span className="text-red-600 font-bold text-sm">2 places restantes</span>
                   </div>
                   <h3 className="text-xl font-serif font-bold mb-1">Module 1 : Présence à Soi</h3>
                   <p className="text-text-muted text-sm mb-6">3 jours - 21h de formation</p>

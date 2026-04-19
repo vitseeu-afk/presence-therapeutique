@@ -180,8 +180,7 @@ export default function Home() {
 
             <div className="bg-cream rounded-3xl p-8 lg:p-10 border border-border">
               <div className="flex items-center gap-2 mb-6">
-                <span className="px-3 py-1 bg-sage/10 text-sage-dark text-xs font-semibold rounded-full">Places limitées</span>
-                <span className="px-3 py-1 bg-terracotta/10 text-terracotta text-xs font-semibold rounded-full">8 places max</span>
+                <span className="text-red-600 font-bold text-sm">2 places restantes</span>
               </div>
               <h3 className="text-2xl font-serif font-bold mb-2">Module 1 : Présence à Soi</h3>
               <p className="text-text-light mb-6">3 jours intenses de reconnexion à soi</p>

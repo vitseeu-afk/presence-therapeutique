@@ -133,8 +133,9 @@ export default function Inscription() {
                     </label>
                   </div>
 
+                  <p className="text-red-600 font-bold text-sm text-center mb-3">2 places restantes</p>
                   <button type="submit"
-                    className="w-full px-8 py-4 bg-sage text-white font-semibold rounded-full hover:bg-sage-dark transition-all text-lg mt-4">
+                    className="w-full px-8 py-4 bg-sage text-white font-semibold rounded-full hover:bg-sage-dark transition-all text-lg">
                     Payer l&apos;acompte de 135 &euro; et valider
                   </button>
                   <p className="text-xs text-text-muted text-center">
