@@ -202,7 +202,7 @@ export default function Formations() {
                   <div className="bg-white rounded-xl p-6 border border-border">
                     <h4 className="font-serif text-lg font-semibold text-text mb-3">Modalités d&apos;accès</h4>
                     <ul className="text-text-light text-sm space-y-2">
-                      <li>Groupe de 6 à 8 participants maximum</li>
+                      <li>Groupe de 10 participants maximum</li>
                       <li>Inscription via formulaire + acompte de 30%</li>
                       <li>Échange préalable par téléphone possible</li>
                       <li>Formation confirmée à partir de 6 inscrits</li>
