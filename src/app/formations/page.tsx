@@ -116,9 +116,8 @@ export default function FormationsCatalogue() {
               <div className="bg-warm lg:border-l border-t lg:border-t-0 border-border p-8 lg:p-10 flex flex-col justify-center">
                 <p className="text-xs text-text-muted font-medium uppercase tracking-wide mb-3">Tarif</p>
                 <p className="text-4xl font-serif font-bold text-text mb-1">450 €</p>
-                <p className="text-sm text-text-muted mb-6">
-                  Acompte de 135 € à l&apos;inscription<br />
-                  Solde avant le 5 octobre 2026
+                <p className="text-sm text-text-muted/70 italic mb-6">
+                  Acompte de 135 € à l&apos;inscription
                 </p>
                 <div className="space-y-2 text-sm text-text-light">
                   <div className="flex items-center gap-2">
