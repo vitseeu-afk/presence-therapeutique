@@ -43,7 +43,7 @@ export default function FormationsCatalogue() {
                     Inscriptions ouvertes
                   </span>
                   <span className="px-3 py-1 bg-warm text-text-muted text-xs font-semibold rounded-full">
-                    8 places max
+                    10 places max
                   </span>
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-serif font-bold text-text mb-2">
@@ -69,7 +69,7 @@ export default function FormationsCatalogue() {
                       </div>
                       <div className="flex items-center gap-2 mt-3">
                         <p className="text-base text-text font-semibold whitespace-nowrap">8–10 fév. 2027</p>
-                        <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-700 whitespace-nowrap">Ouvert</span>
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-700 whitespace-nowrap">5 places restantes</span>
                       </div>
                     </div>
                   </div>
@@ -89,7 +89,7 @@ export default function FormationsCatalogue() {
                     </svg>
                     <div>
                       <p className="text-xs text-text-muted font-medium uppercase tracking-wide">Groupe</p>
-                      <p className="text-sm text-text font-semibold">8 places maximum</p>
+                      <p className="text-sm text-text font-semibold">10 places maximum</p>
                     </div>
                   </div>
                 </div>
@@ -107,6 +107,9 @@ export default function FormationsCatalogue() {
                     Voir le programme
                   </Link>
                 </div>
+                <p className="mt-3 text-xs text-text-muted">
+                  Remboursement intégral si annulation avant le 1er janvier 2027
+                </p>
               </div>
 
               {/* Sidebar tarif */}
