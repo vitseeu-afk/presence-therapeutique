@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import NotifyForm from "@/components/NotifyForm";
 
 export const metadata: Metadata = {
   title: "Ateliers et Stages - Présence Thérapeutique",
@@ -47,17 +48,7 @@ export default function AteliersStages() {
               Les premiers ateliers et stages sont en cours de préparation.
               Inscrivez-vous à la newsletter pour être informé des prochaines dates.
             </p>
-            <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Votre email"
-                className="flex-1 px-5 py-3 rounded-full border border-border bg-white text-text placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-sage/50"
-                required
-              />
-              <button type="submit" className="px-6 py-3 bg-sage text-white font-semibold rounded-full hover:bg-sage-dark transition-all">
-                Me prévenir
-              </button>
-            </form>
+            <NotifyForm />
           </div>
 
           {/* Types d'ateliers prevus */}
