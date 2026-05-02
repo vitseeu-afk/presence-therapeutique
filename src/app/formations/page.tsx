@@ -67,9 +67,9 @@ export default function FormationsCatalogue() {
                         <p className="text-base text-text-muted font-medium">12–14 oct. 2026</p>
                         <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-red-100 text-red-700">Complet</span>
                       </div>
-                      <div className="flex items-center gap-2 mt-2">
-                        <p className="text-base text-text font-semibold">8–10 fév. 2027</p>
-                        <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-700">Places disponibles</span>
+                      <div className="flex items-center gap-2 mt-3">
+                        <p className="text-base text-text font-semibold whitespace-nowrap">8–10 fév. 2027</p>
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-700 whitespace-nowrap">Ouvert</span>
                       </div>
                     </div>
                   </div>
