@@ -226,11 +226,14 @@ export default function Formations() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
                       </svg>
                       <div>
-                        <div className="flex items-center gap-2">
-                          <span className="text-text-muted">12, 13 et 14 octobre 2026</span>
-                          <span className="text-red-600 font-bold text-xs">· Complet</span>
+                        <div className="flex items-center gap-2 mt-1">
+                          <span className="text-text-muted font-medium whitespace-nowrap">12–14 oct. 2026</span>
+                          <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-red-100 text-red-700 whitespace-nowrap">Complet</span>
                         </div>
-                        <p>8, 9 et 10 février 2027</p>
+                        <div className="flex items-center gap-2 mt-2">
+                          <span className="text-text font-semibold whitespace-nowrap">8–10 fév. 2027</span>
+                          <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-700 whitespace-nowrap">5 places restantes</span>
+                        </div>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
@@ -267,8 +270,7 @@ export default function Formations() {
                     <div className="flex items-baseline gap-2 mb-1">
                       <span className="text-3xl font-serif font-bold text-text">450 &euro;</span>
                     </div>
-                    <p className="text-xs text-text-muted mb-1">Acompte de 135 &euro; à l&apos;inscription</p>
-                    <p className="text-xs text-text-muted">Solde par virement avant le 5 octobre 2026</p>
+                    <p className="text-xs text-text-muted/70 italic">Acompte de 135 &euro; à l&apos;inscription</p>
                   </div>
 
                   <div className="space-y-3">
@@ -276,7 +278,7 @@ export default function Formations() {
                       href="/inscription"
                       className="block text-center w-full px-8 py-4 bg-sage text-white font-semibold rounded-full hover:bg-sage-dark transition-all hover:shadow-lg text-base"
                     >
-                      S&apos;inscrire — Session Fév. 2027
+                      S&apos;inscrire — Fév. 2027
                     </Link>
                     <p className="text-xs text-text-muted text-center">
                       Paiement sécurisé &middot; Satisfait ou remboursé
