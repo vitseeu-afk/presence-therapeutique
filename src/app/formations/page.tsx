@@ -63,8 +63,14 @@ export default function FormationsCatalogue() {
                     </svg>
                     <div>
                       <p className="text-xs text-text-muted font-medium uppercase tracking-wide">Dates</p>
-                      <p className="text-sm text-text-muted">12–14 oct. 2026 <span className="text-red-600 font-bold">· Complet</span></p>
-                      <p className="text-sm text-text font-semibold">8–10 fév. 2027</p>
+                      <div className="flex items-center gap-2 mt-1">
+                        <p className="text-base text-text-muted font-medium">12–14 oct. 2026</p>
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-red-100 text-red-700">Complet</span>
+                      </div>
+                      <div className="flex items-center gap-2 mt-2">
+                        <p className="text-base text-text font-semibold">8–10 fév. 2027</p>
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-700">Places disponibles</span>
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
