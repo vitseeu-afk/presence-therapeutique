@@ -88,12 +88,6 @@ export default function FormationsCatalogue() {
                   </div>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 flex-wrap items-center">
-                  <div className="flex items-center gap-3">
-                    <button disabled className="inline-flex items-center justify-center px-8 py-4 bg-gray-100 text-gray-400 font-semibold rounded-full cursor-not-allowed text-base border border-gray-200">
-                      S&apos;inscrire
-                    </button>
-                    <span className="text-red-600 font-bold text-sm">Complet</span>
-                  </div>
                   <Link
                     href="/inscription"
                     className="inline-flex items-center justify-center px-8 py-4 bg-sage text-white font-semibold rounded-full hover:bg-sage-dark transition-all hover:shadow-lg text-base"
