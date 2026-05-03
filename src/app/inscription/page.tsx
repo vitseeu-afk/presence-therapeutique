@@ -1,13 +1,47 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Inscription - Module 1 : Présence à Soi",
-  description:
-    "Inscrivez-vous au Module 1 Présence à Soi. 8-10 février 2027, HUB Eurasanté, Loos (59). Formation en Présence Thérapeutique Intégrative pour professionnels de santé.",
-};
-
 export default function Inscription() {
+  const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMsg("");
+
+    const form = e.currentTarget;
+    const data = {
+      nom: (form.elements.namedItem("nom") as HTMLInputElement).value,
+      prenom: (form.elements.namedItem("prenom") as HTMLInputElement).value,
+      date_naissance: (form.elements.namedItem("date_naissance") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      telephone: (form.elements.namedItem("telephone") as HTMLInputElement).value,
+      adresse: (form.elements.namedItem("adresse") as HTMLInputElement).value,
+      profession: (form.elements.namedItem("profession") as HTMLInputElement).value,
+      structure: (form.elements.namedItem("structure") as HTMLInputElement).value,
+      annees: (form.elements.namedItem("annees") as HTMLInputElement).value,
+      attentes: (form.elements.namedItem("attentes") as HTMLTextAreaElement).value,
+    };
+
+    const res = await fetch("/api/inscription", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    if (res.ok) {
+      const { url } = await res.json();
+      window.location.href = url;
+    } else {
+      const body = await res.json().catch(() => ({}));
+      setErrorMsg(body.error ?? "Une erreur est survenue. Veuillez réessayer.");
+      setStatus("error");
+    }
+  }
+
   return (
     <>
       <section className="bg-gradient-to-b from-white to-cream py-16 lg:py-20">
@@ -47,7 +81,7 @@ export default function Inscription() {
             <div className="lg:col-span-2">
               <div className="bg-white rounded-2xl p-8 border border-border">
                 <h2 className="text-xl font-serif font-semibold text-text mb-6">Vos informations</h2>
-                <form className="space-y-5">
+                <form className="space-y-5" onSubmit={handleSubmit}>
                   <div>
                     <label className="block text-sm font-medium text-text mb-2">Date</label>
                     <div className="w-full px-4 py-3 rounded-xl border border-border bg-cream/50 text-text text-sm">
@@ -141,9 +175,16 @@ export default function Inscription() {
                     </label>
                   </div>
 
-                  <button type="submit"
-                    className="w-full px-8 py-4 bg-sage text-white font-semibold rounded-full hover:bg-sage-dark transition-all text-lg">
-                    Payer l&apos;acompte de 135 &euro; et valider
+                  {status === "error" && (
+                    <p className="text-sm text-red-600 bg-red-50 px-4 py-3 rounded-xl">{errorMsg}</p>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={status === "loading"}
+                    className="w-full px-8 py-4 bg-sage text-white font-semibold rounded-full hover:bg-sage-dark transition-all text-lg disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    {status === "loading" ? "Redirection vers le paiement…" : "Payer l'acompte de 135 € et valider"}
                   </button>
                   <p className="text-xs text-text-muted text-center">
                     Paiement sécurisé par Stripe. Vous serez redirigé vers la page de paiement.
