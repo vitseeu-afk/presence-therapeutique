@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
       "api-key": apiKey,
     },
     body: JSON.stringify({
-      sender: { name: `${prenom} ${nom}`, email: "no-reply@presence-therapeutique.fr" },
+      sender: { name: `${prenom} ${nom}`, email: "vitse.eu@gmail.com" },
       to: [{ email: "vitse.eu@gmail.com", name: "Eugénie Vitse" }],
       replyTo: { email, name: `${prenom} ${nom}` },
       subject: `[Contact] ${sujetLabel[sujet] ?? "Message"} — ${prenom} ${nom}`,
