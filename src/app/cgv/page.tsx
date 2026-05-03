@@ -35,7 +35,7 @@ export default function CGV() {
           <div>
             <h2 className="text-xl font-serif font-semibold text-text mb-3">Article 3 - Taille du groupe et maintien de la formation</h2>
             <p className="mb-3">
-              La formation est conçue pour un petit groupe de 8 personnes maximum. Elle ne sera confirmée
+              La formation est conçue pour un petit groupe de 10 personnes maximum. Elle ne sera confirmée
               qu&apos;à partir d&apos;un nombre minimum de participants (6 personnes). Si ce seuil n&apos;est pas atteint
               15 jours avant le début du premier module, l&apos;organisatrice se réserve le droit d&apos;annuler
               ou de reporter la formation.
