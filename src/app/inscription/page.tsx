@@ -169,7 +169,7 @@ export default function Inscription() {
                       <span className="text-text">Tarif total</span>
                       <span className="text-2xl font-serif font-bold text-text">450 &euro;</span>
                     </div>
-                    <div className="flex justify-between items-baseline text-sm mt-1">
+                    <div className="flex justify-between items-baseline text-base mt-1">
                       <span className="font-bold text-sage">Acompte aujourd&apos;hui</span>
                       <span className="font-bold text-sage">135 &euro;</span>
                     </div>
