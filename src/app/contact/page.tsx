@@ -1,12 +1,42 @@
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Contact - Présence Thérapeutique",
-  description:
-    "Contactez Eugénie Vitse pour toute question sur les formations en Présence Thérapeutique Intégrative. Téléphone, email ou formulaire de contact.",
-};
+import { useState } from "react";
 
 export default function Contact() {
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMsg("");
+
+    const form = e.currentTarget;
+    const data = {
+      prenom: (form.elements.namedItem("prenom") as HTMLInputElement).value,
+      nom: (form.elements.namedItem("nom") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      telephone: (form.elements.namedItem("telephone") as HTMLInputElement).value,
+      sujet: (form.elements.namedItem("sujet") as HTMLSelectElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    if (res.ok) {
+      setStatus("success");
+      form.reset();
+    } else {
+      const body = await res.json().catch(() => ({}));
+      setErrorMsg(body.error ?? "Une erreur est survenue. Veuillez réessayer.");
+      setStatus("error");
+    }
+  }
+
   return (
     <>
       <section className="bg-gradient-to-b from-white to-cream py-16 lg:py-24">
@@ -23,50 +53,77 @@ export default function Contact() {
             {/* Formulaire */}
             <div className="bg-white rounded-2xl p-8 border border-border">
               <h2 className="text-2xl font-serif font-semibold text-text mb-6">Envoyez-moi un message</h2>
-              <form className="space-y-5">
-                <div className="grid sm:grid-cols-2 gap-4">
+
+              {status === "success" ? (
+                <div className="flex flex-col items-center justify-center py-12 text-center gap-4">
+                  <div className="w-14 h-14 bg-sage/10 rounded-full flex items-center justify-center">
+                    <svg className="w-7 h-7 text-sage" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                  </div>
+                  <p className="text-lg font-semibold text-text">Message envoyé !</p>
+                  <p className="text-text-light text-sm">Je vous répondrai dans les meilleurs délais.</p>
+                  <button
+                    onClick={() => setStatus("idle")}
+                    className="mt-4 text-sm text-sage-dark underline hover:no-underline"
+                  >
+                    Envoyer un autre message
+                  </button>
+                </div>
+              ) : (
+                <form className="space-y-5" onSubmit={handleSubmit}>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="prenom" className="block text-sm font-medium text-text mb-1.5">Prénom</label>
+                      <input type="text" id="prenom" name="prenom" required
+                        className="w-full px-4 py-3 rounded-xl border border-border bg-cream/50 text-text placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-sage/50" />
+                    </div>
+                    <div>
+                      <label htmlFor="nom" className="block text-sm font-medium text-text mb-1.5">Nom</label>
+                      <input type="text" id="nom" name="nom" required
+                        className="w-full px-4 py-3 rounded-xl border border-border bg-cream/50 text-text placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-sage/50" />
+                    </div>
+                  </div>
                   <div>
-                    <label htmlFor="prenom" className="block text-sm font-medium text-text mb-1.5">Prénom</label>
-                    <input type="text" id="prenom" name="prenom" required
+                    <label htmlFor="email" className="block text-sm font-medium text-text mb-1.5">Email</label>
+                    <input type="email" id="email" name="email" required
                       className="w-full px-4 py-3 rounded-xl border border-border bg-cream/50 text-text placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-sage/50" />
                   </div>
                   <div>
-                    <label htmlFor="nom" className="block text-sm font-medium text-text mb-1.5">Nom</label>
-                    <input type="text" id="nom" name="nom" required
+                    <label htmlFor="telephone" className="block text-sm font-medium text-text mb-1.5">Téléphone</label>
+                    <input type="tel" id="telephone" name="telephone"
                       className="w-full px-4 py-3 rounded-xl border border-border bg-cream/50 text-text placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-sage/50" />
                   </div>
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-text mb-1.5">Email</label>
-                  <input type="email" id="email" name="email" required
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-cream/50 text-text placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-sage/50" />
-                </div>
-                <div>
-                  <label htmlFor="telephone" className="block text-sm font-medium text-text mb-1.5">Téléphone</label>
-                  <input type="tel" id="telephone" name="telephone"
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-cream/50 text-text placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-sage/50" />
-                </div>
-                <div>
-                  <label htmlFor="sujet" className="block text-sm font-medium text-text mb-1.5">Sujet</label>
-                  <select id="sujet" name="sujet"
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-cream/50 text-text focus:outline-none focus:ring-2 focus:ring-sage/50">
-                    <option value="">Choisir un sujet</option>
-                    <option value="formation">Question sur une formation</option>
-                    <option value="inscription">Inscription</option>
-                    <option value="entreprise">Intervention en entreprise</option>
-                    <option value="autre">Autre</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-text mb-1.5">Message</label>
-                  <textarea id="message" name="message" rows={5} required
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-cream/50 text-text placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-sage/50 resize-none" />
-                </div>
-                <button type="submit"
-                  className="w-full px-8 py-4 bg-sage text-white font-semibold rounded-full hover:bg-sage-dark transition-all text-lg">
-                  Envoyer le message
-                </button>
-              </form>
+                  <div>
+                    <label htmlFor="sujet" className="block text-sm font-medium text-text mb-1.5">Sujet</label>
+                    <select id="sujet" name="sujet"
+                      className="w-full px-4 py-3 rounded-xl border border-border bg-cream/50 text-text focus:outline-none focus:ring-2 focus:ring-sage/50">
+                      <option value="">Choisir un sujet</option>
+                      <option value="formation">Question sur une formation</option>
+                      <option value="inscription">Inscription</option>
+                      <option value="entreprise">Intervention en entreprise</option>
+                      <option value="autre">Autre</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-text mb-1.5">Message</label>
+                    <textarea id="message" name="message" rows={5} required
+                      className="w-full px-4 py-3 rounded-xl border border-border bg-cream/50 text-text placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-sage/50 resize-none" />
+                  </div>
+
+                  {status === "error" && (
+                    <p className="text-sm text-red-600 bg-red-50 px-4 py-3 rounded-xl">{errorMsg}</p>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={status === "loading"}
+                    className="w-full px-8 py-4 bg-sage text-white font-semibold rounded-full hover:bg-sage-dark transition-all text-lg disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    {status === "loading" ? "Envoi en cours…" : "Envoyer le message"}
+                  </button>
+                </form>
+              )}
             </div>
 
             {/* Infos contact */}

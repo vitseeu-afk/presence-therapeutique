@@ -169,13 +169,9 @@ export default function Inscription() {
                       <span className="text-text">Tarif total</span>
                       <span className="text-2xl font-serif font-bold text-text">450 &euro;</span>
                     </div>
-                    <div className="flex justify-between items-baseline text-sm">
-                      <span className="text-text-muted">Acompte à l&apos;inscription</span>
-                      <span className="font-semibold text-sage-dark">135 &euro;</span>
-                    </div>
                     <div className="flex justify-between items-baseline text-sm mt-1">
-                      <span className="text-text-muted">Solde par virement</span>
-                      <span className="text-text-muted">315 &euro;</span>
+                      <span className="font-bold text-sage">Acompte aujourd&apos;hui</span>
+                      <span className="font-bold text-sage">135 &euro;</span>
                     </div>
                   </div>
                 </div>
@@ -186,7 +182,6 @@ export default function Inscription() {
                     <li>Email de confirmation avec les détails</li>
                     <li>Coordonnées bancaires pour le solde</li>
                     <li>Rappel 3 semaines avant si solde non reçu</li>
-                    <li>Solde a verser au plus tard le 5 octobre 2026</li>
                   </ol>
                 </div>
 
